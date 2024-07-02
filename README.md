@@ -11,6 +11,10 @@ Nous, les enseignants, pouvons donc partager des examens pour toute l'année et 
 - Questions sur Types de Données: Génère des questions pour créer et manipuler des int, float, str, list, et bool.
 - Utilisation de Boucles: Pose des questions aléatoires pour la création d'une boucle for.
 
+## Exemple
+![Example Image](Exemple.jpg)
+
+## Usage
 Pour générer un examen, exécutez le script principal:
 
 ``python generate_exam.py``
