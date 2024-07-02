@@ -1,0 +1,57 @@
+\documentclass[12pt]{exam}
+\pointsinmargin
+
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\ttfamily, numbers=left, numberstyle=\tiny}
+\usepackage[margin=2cm]{geometry}
+
+\begin{document}
+
+\begin{center}
+\textbf{2INDF Examen de Programmation Python} \hfill Nom : \rule{6cm}{0.4pt}
+\end{center}
+
+\begin{questions}
+
+\question[5] Complétez la table de traçage suivante pour le code donné :
+
+\hfill
+\begin{minipage}[t]{0.2\textwidth}
+\vspace{0mm}
+\begin{lstlisting}
+VARIABLE0 = BIGINT
+VARIABLE1 = SMALLINT
+VARIABLE2 = VARIABLE0 PM VARIABLE1
+VARIABLE0 = VARIABLE0 * 2
+VARIABLE1 = VARIABLE2 PM 1
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+\vspace{-4mm}
+    \begin{tabular}{|c|p{5mm}|p{5mm}|p{5mm}|}
+        \hline
+        {\footnotesize Ligne} & \texttt{VARIABLE0} & \texttt{VARIABLE1} & \texttt{VARIABLE2} \\
+        \hline
+        1 &  &  &  \\
+        \hline
+        2 &  &  &  \\
+        \hline
+        3 &  &  &  \\
+        \hline
+        4 &  &  &  \\
+        \hline
+        5 &  &  &  \\
+        \hline
+    \end{tabular}
+\end{minipage}
+
+OTHERQUESTIONS
+
+\question[5] Ecrivez une boucle \texttt{for} qui affiche les nombres TASKLOOP.
+\fillwithgrid{18mm}
+
+\end{questions}
+
+\end{document}
