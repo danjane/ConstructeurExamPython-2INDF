@@ -13,7 +13,7 @@ latex_code = latex_code.replace("PM", random.choice("+-"))
 names = random.sample("abcdef", 3)
 values = [random.randint(1, 10), random.randint(2, 8) + 0.5, random.choice(["True", "False"])]
 basic_questions = [
-    f"\\question[3] Affectez la valeur \\texttt{{{v}}} à une variable nommé \\texttt{{{n}}}."
+    f"\\question[2] Affectez la valeur \\texttt{{{v}}} à une variable nommé \\texttt{{{n}}}."
     f"\n\\fillwithgrid{{14mm}}"
     f'\nQuel est le type de la variable :\\dotfill'
     for n, v in zip(names, values)
@@ -86,6 +86,16 @@ task_conditions = random.choice([
 for i, key_word in enumerate(["TASKCONDITIONNELLE", "TASKC1", "TASKC2", "TASKC3", "TASKVAR"]):
     latex_code = latex_code.replace(key_word, task_conditions[i])
 
+names = ["Harry", "Hermione", "Ron", "Drago", "Neville", "Ginny", "Luna", "Cedric"]
+chosens = random.sample(names, 4)
+for i, name in enumerate(chosens):
+    latex_code = latex_code.replace(f'NAME{i}', name)
+for i, name in enumerate(random.sample(names, 2)):
+    latex_code = latex_code.replace(f'TEST{i}', name)
+
+latex_code = latex_code.replace('NAMEREPLACED', random.choice(chosens))
+latex_code = latex_code.replace('NIEME', random.choice(
+    ["premier", "deuxième", "troisième", "quatrième"]))
 
 print(latex_code)
 latex_file = 'examen_python.tex'
