@@ -13,19 +13,21 @@ latex_code = latex_code.replace("PM", random.choice("+-"))
 names = random.sample("abcdef", 3)
 values = [random.randint(1, 10), random.randint(2, 8) + 0.5, random.choice(["True", "False"])]
 basic_questions = [
-    f"\\question[3] Créez une variable appelée \\texttt{{{n}}} et attribuez-lui la valeur \\texttt{{{v}}}, "
-    r" et puis écrire son type.\fillwithgrid{8mm}\fillwithdottedlines{10mm}"
+    f"\\question[3] Affectez la valeur \\texttt{{{v}}} à une variable nommé \\texttt{{{n}}}."
+    f"\n\\fillwithgrid{{9mm}}"
+    f'\nQuel est le type de la variable :\\dotfill'
     for n, v in zip(names, values)
 ]
 
-latex_code = latex_code.replace("OTHERQUESTIONS", "".join(random.sample(basic_questions, 3)))
+latex_code = latex_code.replace("AFFECTATIONQUESTIONS", "".join(random.sample(basic_questions, 3)))
 
-task_loop = random.choice([
+task_loops = random.sample([
     "de 1 à 5",
     "pairs de 2 à 10",
     "impairs de 1 à 9"
-])
-latex_code = latex_code.replace("TASKLOOP", task_loop)
+], 2)
+latex_code = latex_code.replace("TASKLOOP1", task_loops[0])
+latex_code = latex_code.replace("TASKLOOP2", task_loops[1])
 
 print(latex_code)
 latex_file = 'examen_python.tex'
